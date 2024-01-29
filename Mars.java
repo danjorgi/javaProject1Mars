@@ -18,6 +18,7 @@ public class Mars {
             System.out.println("ERROR!!! FLight plan already set. Landing on the Plain");
         }
         landing = landingCheck(25);
+
     }
 
     public static boolean landingCheck(int minutesLeft) throws InterruptedException {
