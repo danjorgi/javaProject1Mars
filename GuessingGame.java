@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,7 +20,19 @@ public class GuessingGame {
         int tries = 0;
 
         while (true) {
-            int guess = input.nextInt();
+            int guess;
+            try {
+                guess = input.nextInt();
+            } catch (InputMismatchException e) {
+                String bad_input = input.next();
+                System.out.println("HA! That's not a number, try again dummy.");
+                continue;
+            }
+
+            if (guess < 1 || guess > 100) {
+                System.out.println(guess + " is out of range, try again.");
+                continue;
+            }
             
             tries = tries + 1;
 
@@ -34,9 +47,4 @@ public class GuessingGame {
             }
         }
     }
-
-    public static void main(String[] args) {
-        GuessingGame game = new GuessingGame();
-    }
-
 }
