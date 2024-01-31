@@ -97,8 +97,4 @@ public class MarsExpedition {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-        MarsExpedition expedition = new MarsExpedition();
-    }
 }

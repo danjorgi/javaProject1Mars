@@ -21,6 +21,7 @@ public class Mars {
 
         GuessingGame game = new GuessingGame();
         MarsExpedition expedition = new MarsExpedition();
+        FindingsList fossils = new FindingsList();
     }
 
     public static boolean landingCheck(int minutesLeft) throws InterruptedException {
